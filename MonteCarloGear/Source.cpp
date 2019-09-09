@@ -21,6 +21,8 @@ int main() {
 		return rd()/(double)rd.max();
 	};
 
+	//mt.discard(624*624);
+
 	auto F2 = [&]()->double {
 		return mt()/(double)mt.max();
 	};
@@ -30,7 +32,7 @@ int main() {
 	auto F3 = [&]()->double {//1% noize at 10000count??
 		return mr()/(double)mr.max();
 	};
-	auto R1 = MonteCarloReActer<double>(100000, F2);
+	auto R1 = MonteCarloReActer<double>(10000, F2);
 
 	return 0;
 }
